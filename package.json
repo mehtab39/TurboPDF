@@ -1,0 +1,23 @@
+{
+  "name": "viz-pdf",
+  "version": "0.1.0",
+  "description": "Rust-based PDF renderer with WASM for React",
+  "private": true,
+  "scripts": {
+    "build:wasm": "wasm-pack build --target web --out-dir www/pkg",
+    "build:react": "cd www && npm run build",
+    "build": "npm run build:wasm && npm run build:react",
+    "dev:wasm": "wasm-pack build --target web --out-dir www/pkg --dev",
+    "dev": "npm run dev:wasm && cd www && npm run dev",
+    "setup": "cd www && npm install"
+  },
+  "keywords": [
+    "pdf",
+    "wasm",
+    "rust",
+    "react",
+    "viewer"
+  ],
+  "author": "",
+  "license": "MIT"
+}
